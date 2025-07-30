@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://clf77fpnwdfs6"
+path="res://.godot/imported/Snowyy Rev 3.mp3-d7ef211728a41c66415a32897d6413df.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Snowyy Rev 3.mp3"
+dest_files=["res://.godot/imported/Snowyy Rev 3.mp3-d7ef211728a41c66415a32897d6413df.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=96.0
+beat_count=0
+bar_beats=4

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://caxb2a4no4m64"]
+[gd_scene load_steps=5 format=3 uid="uid://caxb2a4no4m64"]
 
 [ext_resource type="Texture2D" uid="uid://dagks0v3v4flq" path="res://Assets/cat-confused.png" id="1_5s7ov"]
 [ext_resource type="Shader" uid="uid://bttgue2aohk47" path="res://Shaders/CRT_Shader.gdshader" id="2_p3ep3"]
+[ext_resource type="PackedScene" uid="uid://dkn48o3nu1exa" path="res://Scenes/Utils/audio_controller.tscn" id="3_t70dp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t70dp"]
 shader = ExtResource("2_p3ep3")
@@ -45,3 +46,5 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+
+[node name="AudioController" parent="." instance=ExtResource("3_t70dp")]
