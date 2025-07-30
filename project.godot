@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 Utils="*res://Scripts/Globals/Utils.gd"
 SignalBus="*res://Scripts/Globals/Signal_Bus.gd"
+AudioLibrary="*res://Scripts/Globals/Audio_Library.gd"
+RngHandler="*res://Scripts/Globals/Rng_Handler.gd"
 
 [display]
 

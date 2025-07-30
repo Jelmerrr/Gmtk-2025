@@ -1,12 +1,15 @@
 extends Node2D
 
 @onready var sfx_channels: Node2D = $"SFX Channels"
+@onready var music_player: AudioStreamPlayer2D = $MusicPlayer
+@onready var music_delay: Timer = $MusicDelay
 
 var Channels: Array[AudioStreamPlayer2D]
 
 func _ready() -> void:
 	SignalBus.Play_SFX.connect(Play_SFX)
 	SignalBus.Stop_SFX.connect(Stop_SFX)
+	GetMusicDelay()
 	
 	for channel in sfx_channels.get_children():
 		Channels.append(channel)
@@ -30,3 +33,20 @@ func GetPlayingPlayer(SFX):
 	for item in Channels:
 		if item.playing == true && item.stream == SFX:
 			return item
+
+func GetMusicDelay():
+	if music_player.playing == false:
+		var delay = RngHandler.rng.randi_range(10, 240)
+		music_delay.wait_time = delay
+		music_delay.start()
+
+func _on_music_delay_timeout() -> void:
+	PlayMusic()
+	music_delay.stop()
+
+func PlayMusic():
+	music_player.stream = AudioLibrary.Snowyy
+	music_player.play(0)
+
+func _on_music_player_finished() -> void:
+	GetMusicDelay()
