@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 Utils="*res://Scripts/Globals/Utils.gd"
 SignalBus="*res://Scripts/Globals/Signal_Bus.gd"
+AudioLibrary="*res://Scripts/Globals/Audio_Library.gd"
+RngHandler="*res://Scripts/Globals/Rng_Handler.gd"
 
 [display]
 
@@ -72,5 +74,6 @@ DebugExit={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
