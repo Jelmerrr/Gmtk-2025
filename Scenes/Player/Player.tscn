@@ -1,16 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://creydfwj4wn4u"]
 
 [ext_resource type="Script" uid="uid://cdcwldihhl62f" path="res://Scenes/Player/player.gd" id="1_ft8w5"]
-[ext_resource type="Texture2D" uid="uid://dagks0v3v4flq" path="res://Assets/cat-confused.png" id="2_h54ih"]
+[ext_resource type="Texture2D" uid="uid://0vs6g7ruxdhf" path="res://Assets/RedRect PlaceHolder.jpg" id="2_ft8w5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ude3g"]
-size = Vector2(498, 332)
+size = Vector2(32, 32)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_ft8w5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_h54ih")
+texture = ExtResource("2_ft8w5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ude3g")

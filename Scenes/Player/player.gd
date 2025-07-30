@@ -2,7 +2,8 @@ extends CharacterBody2D
 
 @export var speed = 300.0
 
-@onready var screen_size = DisplayServer.window_get_size()##get_viewport_rect().size
+@onready var screen_size = DisplayServer.window_get_size()
+
 
 func _physics_process(delta: float) -> void:
 	velocity = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") * speed

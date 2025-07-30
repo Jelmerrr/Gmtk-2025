@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://baah4e84utq02"]
+
+[ext_resource type="Texture2D" uid="uid://deqmr0e8vk85q" path="res://Assets/Rock PlaceHolder.jpg" id="1_ctwjv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_601oe"]
+size = Vector2(32, 32)
+
+[node name="Stone" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_ctwjv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_601oe")
