@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bok7bh5v0g8x5"]
 
 [ext_resource type="Shader" uid="uid://bttgue2aohk47" path="res://Shaders/CRT_Shader.gdshader" id="1_5ms4e"]
-[ext_resource type="PackedScene" uid="uid://creydfwj4wn4u" path="res://Scenes/Player/Player.tscn" id="1_bhm8u"]
 [ext_resource type="PackedScene" uid="uid://baah4e84utq02" path="res://Scenes/Stone/Stone.tscn" id="3_shgkq"]
+[ext_resource type="PackedScene" uid="uid://t63d16afrss8" path="res://Scenes/Player/GridPlayer.tscn" id="3_ujyaq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_shgkq"]
 shader = ExtResource("1_5ms4e")
@@ -22,9 +22,6 @@ shader_parameter/scan_line_strength = -8.0
 shader_parameter/pixel_strength = -2.0
 
 [node name="TestLevel" type="Node2D"]
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_bhm8u")]
-position = Vector2(106, 75)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -49,10 +46,19 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Stone" parent="." instance=ExtResource("3_shgkq")]
-position = Vector2(-186, -198)
+position = Vector2(-224, -224)
+
+[node name="Stone4" parent="." instance=ExtResource("3_shgkq")]
+position = Vector2(-290, -159)
 
 [node name="Stone2" parent="." instance=ExtResource("3_shgkq")]
-position = Vector2(495, -161)
+position = Vector2(96, -160)
 
 [node name="Stone3" parent="." instance=ExtResource("3_shgkq")]
-position = Vector2(-492, 203)
+position = Vector2(32, 160)
+
+[node name="GridPlayer" parent="." instance=ExtResource("3_ujyaq")]
+position = Vector2(-256, 224)
+
+[node name="Stone5" parent="." instance=ExtResource("3_shgkq")]
+position = Vector2(31, -224)

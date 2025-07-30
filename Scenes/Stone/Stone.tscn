@@ -5,8 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_601oe"]
 size = Vector2(32, 32)
 
-[node name="Stone" type="RigidBody2D"]
-gravity_scale = 0.0
+[node name="Stone" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
