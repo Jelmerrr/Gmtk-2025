@@ -1,0 +1,50 @@
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://2gapqmdxdb8i"]
+
+[ext_resource type="Shader" uid="uid://bk0nhyhdtkmgb" path="res://Shaders/Tilemap_Overlay.gdshader" id="1_103v1"]
+[ext_resource type="Texture2D" uid="uid://bb2ekny0vxjt" path="res://Assets/Tilesets/Layers/IceLayer.png" id="2_fexec"]
+[ext_resource type="Texture2D" uid="uid://dnkdqirwhxu2" path="res://Assets/Tilesets/Layers/SnowLayer.png" id="3_yu0aj"]
+[ext_resource type="Texture2D" uid="uid://25x0p1eowc83" path="res://Assets/Tilesets/Snow-Ice-Tilemap.png" id="4_xtars"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7oknf"]
+shader = ExtResource("1_103v1")
+shader_parameter/overlay_tex_red = ExtResource("3_yu0aj")
+shader_parameter/overlay_tex_blue = ExtResource("2_fexec")
+shader_parameter/scale = 0.0078125
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jiexd"]
+texture = ExtResource("4_xtars")
+0:3/0 = 0
+0:3/0/material = SubResource("ShaderMaterial_7oknf")
+1:3/0 = 0
+1:3/0/material = SubResource("ShaderMaterial_7oknf")
+2:3/0 = 0
+2:3/0/material = SubResource("ShaderMaterial_7oknf")
+3:3/0 = 0
+3:3/0/material = SubResource("ShaderMaterial_7oknf")
+3:2/0 = 0
+3:2/0/material = SubResource("ShaderMaterial_7oknf")
+2:2/0 = 0
+2:2/0/material = SubResource("ShaderMaterial_7oknf")
+1:2/0 = 0
+1:2/0/material = SubResource("ShaderMaterial_7oknf")
+0:2/0 = 0
+0:2/0/material = SubResource("ShaderMaterial_7oknf")
+0:1/0 = 0
+0:1/0/material = SubResource("ShaderMaterial_7oknf")
+1:1/0 = 0
+1:1/0/material = SubResource("ShaderMaterial_7oknf")
+2:1/0 = 0
+2:1/0/material = SubResource("ShaderMaterial_7oknf")
+3:1/0 = 0
+3:1/0/material = SubResource("ShaderMaterial_7oknf")
+3:0/0 = 0
+3:0/0/material = SubResource("ShaderMaterial_7oknf")
+2:0/0 = 0
+2:0/0/material = SubResource("ShaderMaterial_7oknf")
+1:0/0 = 0
+1:0/0/material = SubResource("ShaderMaterial_7oknf")
+0:0/0 = 0
+0:0/0/material = SubResource("ShaderMaterial_7oknf")
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_jiexd")

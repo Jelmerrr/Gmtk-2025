@@ -15,9 +15,13 @@ var animation_speed = 6
 var moving = false
 
 
+var currentState: Utils.playerSurfaceState
+var startOfMovementState: Utils.playerSurfaceState
+
 func _ready():
 	position = position.snapped(Vector2.ONE * tile_size)
 	position += Vector2.ONE * tile_size/2
+	SignalBus.Update_Player_State.connect(Change_Player_State)
 
 func _unhandled_input(event):
 	if moving:
@@ -29,7 +33,28 @@ func _unhandled_input(event):
 func move(dir):
 	ray.target_position = inputs[dir] * tile_size
 	ray.force_raycast_update()
-	while !ray.is_colliding():
+	startOfMovementState = currentState
+	match currentState:
+		Utils.playerSurfaceState.Walking:
+			Walk(dir)
+		Utils.playerSurfaceState.Sliding:
+			Slide(dir)
+
+func Walk(dir):
+	if !ray.is_colliding():
+		var tween = create_tween()
+		tween.tween_property(self, "position",
+			position + inputs[dir] * tile_size, 1.0/animation_speed).set_trans(Tween.TRANS_SINE)
+		moving = true
+		await tween.finished
+		moving = false
+		if startOfMovementState != currentState:
+			#Player gaat van snow -> ice
+			Slide(dir)
+		screen_wrap()
+
+func Slide(dir):
+	while !ray.is_colliding() && currentState == Utils.playerSurfaceState.Sliding:
 		var tween = create_tween()
 		tween.tween_property(self, "position",
 			position + inputs[dir] * tile_size, 1.0/animation_speed).set_trans(Tween.TRANS_SINE)
@@ -37,6 +62,8 @@ func move(dir):
 		await tween.finished
 		moving = false
 		screen_wrap()
+		#Ik heb geprobeerd de code na die if/while statement in een aparte method te gooien,
+		#dit crasht godot wanneer de while triggered lol, beetje ugly code maar probleem voor later.
 
 func screen_wrap():
 	##left to right wrap
@@ -54,3 +81,6 @@ func screen_wrap():
 	##bottom to top wrap
 	if position.y < -screen_size.y/2:
 		position.y = screen_size.y/2
+
+func Change_Player_State(state: Utils.playerSurfaceState):
+	currentState = state
