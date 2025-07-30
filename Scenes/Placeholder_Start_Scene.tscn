@@ -1,6 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://caxb2a4no4m64"]
+[gd_scene load_steps=4 format=3 uid="uid://caxb2a4no4m64"]
 
 [ext_resource type="Texture2D" uid="uid://dagks0v3v4flq" path="res://Assets/cat-confused.png" id="1_5s7ov"]
+[ext_resource type="Shader" uid="uid://bttgue2aohk47" path="res://Shaders/CRT_Shader.gdshader" id="2_p3ep3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t70dp"]
+shader = ExtResource("2_p3ep3")
+shader_parameter/resolution = Vector2(320, 180)
+shader_parameter/scan_line_amount = 1.0
+shader_parameter/warp_amount = 0.168
+shader_parameter/noise_amount = 0.03
+shader_parameter/interference_amount = 0.031
+shader_parameter/grille_amount = 0.0
+shader_parameter/grille_size = 1.0
+shader_parameter/vignette_amount = 0.6
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/aberation_amount = 0.629
+shader_parameter/roll_line_amount = 0.045
+shader_parameter/roll_speed = 1.0
+shader_parameter/scan_line_strength = -8.0
+shader_parameter/pixel_strength = -2.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -8,3 +26,22 @@
 texture = ExtResource("1_5s7ov")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/CanvasLayer"]
+z_index = 4096
+material = SubResource("ShaderMaterial_t70dp")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
