@@ -37,7 +37,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		for dir in inputs.keys():
 			if event.is_action_pressed(dir):
 				if key_inputs.find(dir) == -1:
-					key_inputs.push_back(dir)
+					key_inputs.push_front(dir)
 			elif event.is_action_released(dir):
 				key_inputs.erase(dir)
 
