@@ -1,10 +1,10 @@
 extends Area2D
 
 @onready var ray = $RayCast2D
-@onready var screen_size = DisplayServer.window_get_size()
+@onready var screen_size = DisplayServer.window_get_size() / get_window().content_scale_factor
 
 
-var tile_size = 64
+var tile_size = 16
 var inputs = {
 				"ui_right": Vector2.RIGHT,
 				"ui_left": Vector2.LEFT,
