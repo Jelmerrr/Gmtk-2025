@@ -21,12 +21,13 @@ Utils="*res://Scripts/Globals/Utils.gd"
 SignalBus="*res://Scripts/Globals/Signal_Bus.gd"
 AudioLibrary="*res://Scripts/Globals/Audio_Library.gd"
 RngHandler="*res://Scripts/Globals/Rng_Handler.gd"
+WindowSizeHandler="*res://Scripts/Globals/Window_Size_Handler.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/size/mode=3
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/size/mode=4
 
 [dotnet]
 
