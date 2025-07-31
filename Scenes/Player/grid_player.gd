@@ -66,10 +66,10 @@ func Walk(dir):
 		moving = true
 		await tween.finished
 		moving = false
+		screen_wrap()
 		if startOfMovementState != currentState:
 			#Player gaat van snow -> ice
 			Slide(dir)
-		screen_wrap()
 
 func Slide(dir):
 	while !ray.is_colliding() && currentState == Utils.playerSurfaceState.Sliding:
@@ -89,24 +89,28 @@ func screen_wrap():
 		position.x = screen_size.x/2
 		position = position.snapped(Vector2(-1, 0) * tile_size)
 		position += Vector2(-1, 0) * tile_size/2
+		SignalBus.Force_State_Update.emit()
 
 	##right to left wrap
 	if position.x > screen_size.x/2:
 		position.x = -screen_size.x/2
 		position = position.snapped(Vector2(1, 0) * tile_size)
 		position += Vector2(1, 0) * tile_size/2
+		SignalBus.Force_State_Update.emit()
 
 	##top to bottom wrap
 	if position.y > screen_size.y/2:
 		position.y = -screen_size.y/2
 		position = position.snapped(Vector2(0, 1) * tile_size)
 		position += Vector2(0, 1) * tile_size/2
+		SignalBus.Force_State_Update.emit()
 		
 	##bottom to top wrap
 	if position.y < -screen_size.y/2:
 		position.y = screen_size.y/2
 		position = position.snapped(Vector2(0, -1) * tile_size)
 		position += Vector2(0, -1) * tile_size/2
+		SignalBus.Force_State_Update.emit()
 
 func Change_Player_State(state: Utils.playerSurfaceState):
 	currentState = state
