@@ -1,11 +1,11 @@
 extends Node2D
 
+@onready var level_instance: Node2D = $Level_Instance
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	InstantiateLevel(LevelLibrary.level1)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func InstantiateLevel(level):
+	var levelInstance = level.instantiate()
+	level_instance.add_child.call_deferred(levelInstance)

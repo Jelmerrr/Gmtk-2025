@@ -22,6 +22,7 @@ SignalBus="*res://Scripts/Globals/Signal_Bus.gd"
 AudioLibrary="*res://Scripts/Globals/Audio_Library.gd"
 RngHandler="*res://Scripts/Globals/Rng_Handler.gd"
 WindowSizeHandler="*res://Scripts/Globals/Window_Size_Handler.gd"
+LevelLibrary="*res://Scripts/Globals/Level_Library.gd"
 
 [display]
 

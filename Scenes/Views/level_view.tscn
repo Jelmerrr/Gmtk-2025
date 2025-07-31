@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dv6yq4ayps73i"]
+[gd_scene load_steps=5 format=3 uid="uid://dv6yq4ayps73i"]
 
 [ext_resource type="Shader" uid="uid://bttgue2aohk47" path="res://Shaders/CRT_Shader.gdshader" id="1_yflgh"]
 [ext_resource type="Script" uid="uid://d33sym50n76xt" path="res://Scripts/Level/Game_Handler.gd" id="1_yrhvp"]
 [ext_resource type="PackedScene" uid="uid://dkn48o3nu1exa" path="res://Scenes/Utils/audio_controller.tscn" id="3_a0q4r"]
-[ext_resource type="PackedScene" uid="uid://benna5qru4t0v" path="res://Scenes/Levels/level_1.tscn" id="4_dpvga"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yrhvp"]
 shader = ExtResource("1_yflgh")
@@ -48,6 +47,4 @@ size_flags_vertical = 4
 
 [node name="AudioController" parent="." instance=ExtResource("3_a0q4r")]
 
-[node name="Level_Instaniate" type="Node2D" parent="."]
-
-[node name="Level 1" parent="Level_Instaniate" instance=ExtResource("4_dpvga")]
+[node name="Level_Instance" type="Node2D" parent="."]
