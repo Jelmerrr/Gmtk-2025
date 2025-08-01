@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GMTK-2025"
-run/main_scene="uid://dv6yq4ayps73i"
+run/main_scene="uid://4e0cumgmj3ld"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,12 +23,16 @@ AudioLibrary="*res://Scripts/Globals/Audio_Library.gd"
 RngHandler="*res://Scripts/Globals/Rng_Handler.gd"
 WindowSizeHandler="*res://Scripts/Globals/Window_Size_Handler.gd"
 LevelLibrary="*res://Scripts/Globals/Level_Library.gd"
+SceneHandler="*res://Scripts/Globals/Scene_Handler.gd"
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
 window/size/mode=4
+window/size/initial_position_type=0
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
 
 [dotnet]
 

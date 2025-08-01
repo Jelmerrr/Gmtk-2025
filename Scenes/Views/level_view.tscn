@@ -7,19 +7,19 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yrhvp"]
 shader = ExtResource("1_yflgh")
 shader_parameter/resolution = Vector2(640, 360)
-shader_parameter/scan_line_amount = 1.0
-shader_parameter/warp_amount = 0.168
-shader_parameter/noise_amount = 0.03
-shader_parameter/interference_amount = 0.031
+shader_parameter/scan_line_amount = 0.315
+shader_parameter/warp_amount = 0.056
+shader_parameter/noise_amount = 0.0
+shader_parameter/interference_amount = 0.13
 shader_parameter/grille_amount = 0.0
 shader_parameter/grille_size = 1.0
-shader_parameter/vignette_amount = 0.6
-shader_parameter/vignette_intensity = 0.4
-shader_parameter/aberation_amount = 0.629
+shader_parameter/vignette_amount = 0.854
+shader_parameter/vignette_intensity = 0.472
+shader_parameter/aberation_amount = 0.337
 shader_parameter/roll_line_amount = 0.045
 shader_parameter/roll_speed = 1.0
-shader_parameter/scan_line_strength = -8.0
-shader_parameter/pixel_strength = -2.0
+shader_parameter/scan_line_strength = -4.416
+shader_parameter/pixel_strength = 0.0
 
 [node name="Level_View" type="Node2D"]
 script = ExtResource("1_yrhvp")
