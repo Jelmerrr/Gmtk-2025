@@ -5,8 +5,9 @@ const BASE_SIZE: Vector2 = Vector2(640.0, 360.0)
 
 
 func _ready() -> void:
-	_update_size()
-	get_tree().get_root().size_changed.connect(_update_size)
+	pass
+	#_update_size()
+	#get_tree().get_root().size_changed.connect(_update_size)
 
 
 func _update_size() -> void:
