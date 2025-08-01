@@ -8,7 +8,7 @@
 shader = ExtResource("1_yflgh")
 shader_parameter/resolution = Vector2(640, 360)
 shader_parameter/scan_line_amount = 0.315
-shader_parameter/warp_amount = 0.056
+shader_parameter/warp_amount = 0.0
 shader_parameter/noise_amount = 0.0
 shader_parameter/interference_amount = 0.13
 shader_parameter/grille_amount = 0.0
