@@ -4,7 +4,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	InstantiateLevel(LevelLibrary.level1)
+	InstantiateLevel(LevelLibrary.level6)
 
 func InstantiateLevel(level):
 	var levelInstance = level.instantiate()
