@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://otaxyh7f5b7y"]
+
+[ext_resource type="AudioStream" uid="uid://chp5h53j4r3o5" path="res://Assets/Audio/SFX/icy wind.mp3" id="1_vxetc"]
+
+[node name="WindAmbient" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_vxetc")
+volume_db = -12.0
+autoplay = true
+parameters/looping = true

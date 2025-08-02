@@ -24,6 +24,7 @@ RngHandler="*res://Scripts/Globals/Rng_Handler.gd"
 WindowSizeHandler="*res://Scripts/Globals/Window_Size_Handler.gd"
 LevelLibrary="*res://Scripts/Globals/Level_Library.gd"
 SceneHandler="*res://Scripts/Globals/Scene_Handler.gd"
+WindAmbientGlobal="*res://Scenes/Utils/wind_ambient_global.tscn"
 
 [display]
 

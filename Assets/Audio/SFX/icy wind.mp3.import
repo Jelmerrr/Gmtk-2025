@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://chp5h53j4r3o5"
+path="res://.godot/imported/icy wind.mp3-8cb12cde583e96516fa2c77cd4313e74.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/icy wind.mp3"
+dest_files=["res://.godot/imported/icy wind.mp3-8cb12cde583e96516fa2c77cd4313e74.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

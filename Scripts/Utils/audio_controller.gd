@@ -9,7 +9,7 @@ var Channels: Array[AudioStreamPlayer2D]
 func _ready() -> void:
 	SignalBus.Play_SFX.connect(Play_SFX)
 	SignalBus.Stop_SFX.connect(Stop_SFX)
-	GetMusicDelay()
+	PlayMusic()
 	
 	for channel in sfx_channels.get_children():
 		Channels.append(channel)
@@ -36,7 +36,7 @@ func GetPlayingPlayer(SFX):
 
 func GetMusicDelay():
 	if music_player.playing == false:
-		var delay = RngHandler.rng.randi_range(1, 2)
+		var delay = RngHandler.rng.randi_range(15, 60)
 		music_delay.wait_time = delay
 		music_delay.start()
 
@@ -45,7 +45,8 @@ func _on_music_delay_timeout() -> void:
 	music_delay.stop()
 
 func PlayMusic():
-	music_player.stream = AudioLibrary.Snowyy
+	#picks a random song
+	music_player.stream = AudioLibrary.MusicDict[AudioLibrary.MusicDict.keys()[RngHandler.rng.randi_range(0, AudioLibrary.MusicDict.size() -1 )]]
 	music_player.play(0)
 
 func _on_music_player_finished() -> void:
