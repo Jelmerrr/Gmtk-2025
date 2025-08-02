@@ -1,25 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://dv6yq4ayps73i"]
+[gd_scene load_steps=8 format=3 uid="uid://dv6yq4ayps73i"]
 
 [ext_resource type="Shader" uid="uid://bttgue2aohk47" path="res://Shaders/CRT_Shader.gdshader" id="1_yflgh"]
 [ext_resource type="Script" uid="uid://d33sym50n76xt" path="res://Scripts/Level/Game_Handler.gd" id="1_yrhvp"]
 [ext_resource type="PackedScene" uid="uid://dkn48o3nu1exa" path="res://Scenes/Utils/audio_controller.tscn" id="3_a0q4r"]
+[ext_resource type="PackedScene" uid="uid://c13vf3ordv05b" path="res://Scenes/Views/SceneTransition.tscn" id="3_dpvga"]
+[ext_resource type="Theme" uid="uid://boy52tphv81o3" path="res://Resources/Custom_Button_theme.tres" id="4_37c0c"]
+[ext_resource type="Texture2D" uid="uid://dkepqfeyr23fd" path="res://Assets/reset.png" id="5_rs2og"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yrhvp"]
 shader = ExtResource("1_yflgh")
 shader_parameter/resolution = Vector2(640, 360)
-shader_parameter/scan_line_amount = 1.0
-shader_parameter/warp_amount = 0.168
-shader_parameter/noise_amount = 0.03
-shader_parameter/interference_amount = 0.031
+shader_parameter/scan_line_amount = 0.315
+shader_parameter/warp_amount = 0.0
+shader_parameter/noise_amount = 0.0
+shader_parameter/interference_amount = 0.13
 shader_parameter/grille_amount = 0.0
 shader_parameter/grille_size = 1.0
-shader_parameter/vignette_amount = 0.6
-shader_parameter/vignette_intensity = 0.4
-shader_parameter/aberation_amount = 0.629
+shader_parameter/vignette_amount = 0.854
+shader_parameter/vignette_intensity = 0.472
+shader_parameter/aberation_amount = 0.337
 shader_parameter/roll_line_amount = 0.045
 shader_parameter/roll_speed = 1.0
-shader_parameter/scan_line_strength = -8.0
-shader_parameter/pixel_strength = -2.0
+shader_parameter/scan_line_strength = -4.416
+shader_parameter/pixel_strength = 0.0
 
 [node name="Level_View" type="Node2D"]
 script = ExtResource("1_yrhvp")
@@ -45,6 +48,26 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
+[node name="SceneTransition" parent="Camera2D/CanvasLayer" instance=ExtResource("3_dpvga")]
+position = Vector2(-640, -360)
+
+[node name="Reset_Button" type="Button" parent="Camera2D/CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -51.0
+offset_top = -51.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("4_37c0c")
+icon = ExtResource("5_rs2og")
+
 [node name="AudioController" parent="." instance=ExtResource("3_a0q4r")]
 
 [node name="Level_Instance" type="Node2D" parent="."]
+
+[connection signal="pressed" from="Camera2D/CanvasLayer/Reset_Button" to="." method="_on_reset_button_pressed"]

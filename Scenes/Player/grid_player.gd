@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var ray = $RayCast2D
-@onready var screen_size = DisplayServer.window_get_size() / get_window().content_scale_factor
+@onready var screen_size = Vector2i(640,360)
 
 
 var tile_size = 16
