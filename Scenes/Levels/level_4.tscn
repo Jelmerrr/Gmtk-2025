@@ -1,0 +1,542 @@
+[gd_scene load_steps=6 format=4 uid="uid://yyqmokfvqsnf"]
+
+[ext_resource type="Script" uid="uid://cmgaapvbxaihh" path="res://Scripts/Level/Level_Handler.gd" id="1_jqrsn"]
+[ext_resource type="TileSet" uid="uid://2gapqmdxdb8i" path="res://Assets/Tilesets/SnowIceTileset.tres" id="2_t74h0"]
+[ext_resource type="PackedScene" uid="uid://t63d16afrss8" path="res://Scenes/Player/GridPlayer.tscn" id="3_i4hbv"]
+[ext_resource type="PackedScene" uid="uid://tkwu8uukavbo" path="res://Scenes/LevelExit.tscn" id="4_h0uxt"]
+[ext_resource type="PackedScene" uid="uid://baah4e84utq02" path="res://Scenes/Stone/Stone.tscn" id="5_keyqw"]
+
+[node name="Level 2" type="Node2D"]
+script = ExtResource("1_jqrsn")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AADt/woAAAAAAAMAAADu/woAAAAAAAMAAADv/woAAAAAAAMAAADw/woAAAAAAAMAAADx/woAAAAAAAMAAADy/woAAAAAAAMAAADz/woAAAAAAAMAAAD0/woAAAAAAAMAAAD1/woAAAAAAAMAAAD2/woAAAAAAAMAAAD3/woAAAAAAAMAAAD4/woAAAAAAAMAAAD5/woAAAAAAAMAAAD6/woAAAAAAAMAAAD7/woAAAAAAAMAAAD8/woAAAAAAAMAAAD9/woAAAAAAAMAAAD+/woAAAAAAAMAAAABAAoAAAADAAMAAAACAAoAAAAAAAMAAAADAAoAAAAAAAMAAAAEAAoAAAAAAAMAAAAFAAoAAAAAAAMAAAAGAAoAAAAAAAMAAAAHAAoAAAAAAAMAAAAIAAoAAAAAAAMAAAAJAAoAAAAAAAMAAAAKAAoAAAAAAAMAAAALAAoAAAAAAAMAAAAMAAoAAAAAAAMAAAANAAoAAAAAAAMAAAAOAAoAAAAAAAMAAAAPAAoAAAAAAAMAAAAQAAoAAAAAAAMAAAARAAoAAAAAAAMAAAASAAoAAAAAAAMAAAATAAoAAAAAAAMAAADt//X/AAAAAAMAAADu//X/AAAAAAMAAADv//X/AAAAAAMAAADw//X/AAAAAAMAAADx//X/AAAAAAMAAADy//X/AAAAAAMAAADz//X/AAAAAAMAAAD0//X/AAAAAAMAAAD1//X/AAAAAAMAAAD2//X/AAAAAAMAAAD3//X/AAAAAAMAAAD4//X/AAAAAAMAAAD5//X/AAAAAAMAAAD6//X/AAAAAAMAAAD7//X/AAAAAAMAAAD8//X/AAAAAAMAAAD9//X/AAAAAAMAAAD+//X/AAAAAAMAAAD///X/AAAAAAMAAAAAAPX/AAAAAAMAAAABAPX/AAAAAAMAAAACAPX/AAAAAAMAAAADAPX/AAAAAAMAAAAEAPX/AAAAAAMAAAAFAPX/AAAAAAMAAAAGAPX/AAAAAAMAAAAHAPX/AAAAAAMAAAAIAPX/AAAAAAMAAAAJAPX/AAAAAAMAAAAKAPX/AAAAAAMAAAALAPX/AAAAAAMAAAAMAPX/AAAAAAMAAAANAPX/AAAAAAMAAAAOAPX/AAAAAAMAAAAPAPX/AAAAAAMAAAAQAPX/AAAAAAMAAAARAPX/AAAAAAMAAAASAPX/AAAAAAMAAAATAPX/AAAAAAMAAAATAPb/AAAAAAMAAAATAPf/AAAAAAMAAAATAPj/AAAAAAMAAAATAPn/AAAAAAMAAAATAPr/AAAAAAMAAAATAPv/AAAAAAMAAAATAPz/AAAAAAMAAAATAP3/AAAAAAMAAAATAP7/AAAAAAMAAAATAP//AAAAAAMAAAATAAAAAAAAAAMAAAATAAEAAAAAAAMAAAATAAIAAAAAAAMAAAATAAMAAAAAAAMAAAATAAYAAAAAAAMAAAATAAgAAAAAAAMAAAATAAkAAAAAAAMAAAATAAcAAAAAAAMAAAATAAUAAAAAAAMAAAATAAQAAAAAAAMAAADs/woAAAAAAAMAAADs/wkAAAAAAAMAAADs/wgAAAAAAAMAAADs/wcAAAAAAAMAAADs/wYAAAAAAAMAAADs/wUAAAAAAAMAAADs/wQAAAAAAAMAAADs/wMAAAAAAAMAAADs/wIAAAAAAAMAAADs/wEAAAAAAAMAAADs/wAAAAAAAAMAAADs////AAAAAAMAAADs//7/AAAAAAMAAADs//3/AAAAAAMAAADs//z/AAAAAAMAAADs//v/AAAAAAMAAADs//r/AAAAAAMAAADs//b/AAAAAAMAAADs//X/AAAAAAMAAADs//f/AAAAAAMAAADs//j/AAAAAAMAAADs//n/AAAAAAMAAAD+/wAAAAAAAAAAAAD+////AAAAAAMAAAD///7/AAAAAAMAAAAAAP7/AAAAAAIAAAABAP//AAAAAAMAAAABAAAAAAAAAAMAAAD//wEAAAAAAAMAAAAAAAEAAAAAAAMAAAD+/wEAAAADAAIAAAABAAEAAAAAAAMAAAABAP7/AAABAAIAAAD+//7/AAAAAAMAAAD//wAAAAAAAAMAAAAAAAAAAAAAAAMAAAAAAP//AAAAAAMAAAD/////AAAAAAMAAAD//woAAAAAAAMAAAAAAAoAAAAAAAIAAAD+/wsAAAAAAAMAAAABAAsAAAAAAAMAAAD//wsAAAAAAAMAAAAAAAsAAAAAAAMAAAD+/wkAAAAAAAMAAAD+/wgAAAAAAAMAAAD+/wcAAAAAAAMAAAD+/wYAAAAAAAMAAAD+/wUAAAAAAAMAAAD+/wQAAAADAAMAAAD+/wMAAAADAAIAAAD+/wIAAAADAAIAAAD//wIAAAAAAAMAAAAAAAIAAAAAAAMA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AADu//z/AAAAAAMAAADu//v/AAAAAAMAAADu//r/AAAAAAMAAADu//n/AAAAAAMAAADu//j/AAAAAAMAAADu//f/AAAAAAMAAADv//f/AAAAAAMAAADv//j/AAAAAAMAAADv//n/AAAAAAMAAADv//r/AAAAAAMAAADv//v/AAAAAAMAAADv//z/AAAAAAMAAADv//3/AAAAAAMAAADv//7/AAAAAAMAAADv////AAAAAAMAAADv/wAAAAAAAAMAAADv/wEAAAAAAAMAAADv/wIAAAAAAAMAAADv/wMAAAAAAAMAAADv/wQAAAAAAAMAAADv/wUAAAAAAAMAAADv/wYAAAAAAAMAAADv/wcAAAAAAAMAAADv/wgAAAAAAAMAAADv/wkAAAAAAAMAAADw/wkAAAAAAAMAAADw/wgAAAAAAAMAAADw/wcAAAAAAAMAAADw/wYAAAAAAAMAAADw/wUAAAAAAAMAAADw/wQAAAAAAAMAAADw/wMAAAAAAAMAAADw/wIAAAAAAAMAAADw/wEAAAAAAAMAAADw/wAAAAAAAAMAAADw////AAAAAAMAAADw//7/AAAAAAMAAADw//3/AAAAAAMAAADw//z/AAAAAAMAAADw//v/AAAAAAMAAADw//r/AAAAAAMAAADw//n/AAAAAAMAAADw//j/AAAAAAMAAADw//f/AAAAAAMAAADx//f/AAAAAAMAAADx//j/AAAAAAMAAADx//n/AAAAAAMAAADx//r/AAAAAAMAAADx//v/AAAAAAMAAADx//z/AAAAAAMAAADx//3/AAAAAAMAAADx//7/AAAAAAMAAADx////AAAAAAMAAADx/wAAAAAAAAMAAADx/wEAAAAAAAMAAADx/wIAAAAAAAMAAADx/wMAAAAAAAMAAADx/wQAAAAAAAMAAADx/wUAAAAAAAMAAADx/wYAAAAAAAMAAADx/wcAAAAAAAMAAADx/wgAAAAAAAMAAADx/wkAAAAAAAMAAADy/wkAAAAAAAMAAADy/wgAAAAAAAMAAADy/wcAAAAAAAMAAADy/wYAAAAAAAMAAADy/wUAAAAAAAMAAADy/wQAAAAAAAMAAADy/wMAAAAAAAMAAADy/wIAAAAAAAMAAADy/wEAAAAAAAMAAADy/wAAAAAAAAMAAADy////AAAAAAMAAADy//7/AAAAAAMAAADy//3/AAAAAAMAAADy//z/AAAAAAMAAADy//v/AAAAAAMAAADy//r/AAAAAAMAAADy//n/AAAAAAMAAADy//j/AAAAAAMAAADy//f/AAAAAAMAAADz//f/AAAAAAMAAADz//j/AAAAAAMAAADz//n/AAAAAAMAAADz//r/AAAAAAMAAADz//v/AAAAAAMAAADz//z/AAAAAAMAAADz//3/AAAAAAMAAADz//7/AAAAAAMAAADz////AAAAAAMAAADz/wAAAAAAAAMAAADz/wEAAAAAAAMAAADz/wIAAAAAAAMAAADz/wMAAAAAAAMAAADz/wQAAAAAAAMAAADz/wUAAAAAAAMAAADz/wYAAAAAAAMAAADz/wcAAAAAAAMAAADz/wgAAAAAAAMAAADz/wkAAAAAAAMAAAD0/wkAAAAAAAMAAAD0/wgAAAAAAAMAAAD0/wcAAAAAAAMAAAD0/wYAAAAAAAMAAAD0/wUAAAAAAAMAAAD0/wQAAAAAAAMAAAD0/wMAAAAAAAMAAAD1/wMAAAAAAAMAAAD1/wIAAAAAAAMAAAD1/wEAAAAAAAMAAAD1/wAAAAAAAAMAAAD1////AAAAAAMAAAD1//7/AAAAAAMAAAD1//3/AAAAAAMAAAD1//z/AAAAAAMAAAD1//v/AAAAAAMAAAD1//r/AAAAAAMAAAD1//n/AAAAAAMAAAD1//j/AAAAAAMAAAD1//f/AAAAAAMAAAD1//b/AAAAAAMAAAD2//b/AAAAAAMAAAD2//f/AAAAAAMAAAD2//j/AAAAAAMAAAD2//n/AAAAAAMAAAD2//r/AAAAAAMAAAD2//v/AAAAAAMAAAD2//z/AAAAAAMAAAD2//3/AAAAAAMAAAD2//7/AAAAAAMAAAD2////AAAAAAMAAAD2/wAAAAABAAMAAAD2/wEAAAAAAAIAAAD2/wIAAAAAAAMAAAD2/wMAAAAAAAMAAAD2/wQAAAAAAAMAAAD1/wQAAAAAAAMAAAD1/wUAAAAAAAMAAAD1/wYAAAAAAAMAAAD1/wcAAAAAAAMAAAD1/wgAAAAAAAMAAAD1/wkAAAAAAAMAAAD2/wkAAAAAAAMAAAD2/wgAAAAAAAMAAAD2/wcAAAAAAAMAAAD2/wYAAAAAAAMAAAD2/wUAAAAAAAMAAAD3/wUAAAAAAAMAAAD3/wQAAAAAAAIAAAD3/wMAAAABAAAAAAD3/wIAAAABAAAAAAD3/wEAAAACAAIAAAD3/wAAAAADAAAAAAD3////AAAAAAMAAAD3//7/AAAAAAMAAAD3//3/AAAAAAMAAAD3//z/AAAAAAMAAAD3//v/AAAAAAMAAAD3//r/AAAAAAMAAAD3//n/AAAAAAMAAAD3//j/AAAAAAMAAAD3//f/AAAAAAMAAAD3//b/AAAAAAMAAAD4//b/AAAAAAMAAAD4//f/AAAAAAMAAAD4//j/AAAAAAMAAAD4//n/AAAAAAMAAAD4//r/AAAAAAMAAAD4//v/AAAAAAMAAAD4//z/AAAAAAMAAAD4//3/AAAAAAMAAAD4//7/AAAAAAMAAAD4////AAAAAAMAAAD4/wAAAAADAAAAAAD4/wEAAAACAAEAAAD4/wIAAAACAAEAAAD4/wMAAAACAAEAAAD4/wQAAAABAAIAAAD4/wUAAAAAAAMAAAD4/wYAAAAAAAMAAAD3/wYAAAAAAAMAAAD3/wcAAAAAAAMAAAD3/wgAAAAAAAMAAAD3/wkAAAAAAAMAAAD4/wkAAAAAAAMAAAD4/wgAAAAAAAMAAAD4/wcAAAAAAAMAAAD5/wcAAAAAAAMAAAD5/wYAAAAAAAMAAAD5/wUAAAAAAAMAAAD5/wQAAAABAAIAAAD5/wMAAAACAAEAAAD5/wIAAAACAAEAAAD5/wEAAAACAAEAAAD5/wAAAAADAAAAAAD5////AAAAAAMAAAD5//7/AAAAAAMAAAD5//3/AAAAAAMAAAD5//z/AAAAAAMAAAD5//v/AAAAAAMAAAD5//r/AAAAAAMAAAD5//n/AAAAAAMAAAD5//j/AAAAAAMAAAD5//f/AAAAAAMAAAD5//b/AAAAAAMAAAD6//b/AAAAAAMAAAD6//f/AAAAAAMAAAD6//j/AAAAAAMAAAD6//n/AAAAAAMAAAD6//r/AAAAAAMAAAD6//v/AAAAAAMAAAD6//z/AAAAAAMAAAD6//3/AAAAAAMAAAD6//7/AAAAAAMAAAD6////AAAAAAMAAAD6/wAAAAADAAAAAAD6/wEAAAACAAEAAAD6/wIAAAACAAEAAAD6/wMAAAACAAEAAAD6/wQAAAACAAIAAAD6/wUAAAAAAAIAAAD6/wYAAAAAAAMAAAD6/wcAAAAAAAMAAAD6/wgAAAAAAAMAAAD5/wgAAAAAAAMAAAD5/wkAAAAAAAMAAAD6/wkAAAAAAAMAAAD7/wkAAAAAAAMAAAD7/wgAAAAAAAMAAAD7/wcAAAAAAAMAAAD7/wYAAAAAAAMAAAD7/wUAAAADAAMAAAD7/wQAAAACAAEAAAD7/wMAAAACAAEAAAD7/wIAAAACAAEAAAD7/wEAAAACAAEAAAD7/wAAAAADAAAAAAD7////AAAAAAMAAAD7//7/AAAAAAMAAAD7//3/AAAAAAIAAAD7//z/AAABAAMAAAD7//v/AAAAAAMAAAD7//r/AAAAAAMAAAD7//n/AAAAAAMAAAD7//j/AAAAAAMAAAD7//f/AAAAAAMAAAD7//b/AAAAAAMAAAD8//b/AAAAAAMAAAD8//f/AAAAAAMAAAD8//j/AAAAAAMAAAD8//n/AAAAAAMAAAD8//r/AAAAAAMAAAD8//v/AAABAAMAAAD8//z/AAABAAEAAAD8//3/AAACAAIAAAD8//7/AAAAAAIAAAD8////AAAAAAMAAAD8/wAAAAADAAAAAAD8/wEAAAACAAEAAAD8/wIAAAACAAEAAAD8/wMAAAACAAEAAAD8/wQAAAABAAIAAAD8/wUAAAAAAAMAAAD8/wYAAAAAAAMAAAD8/wcAAAAAAAMAAAD8/wgAAAAAAAMAAAD8/wkAAAAAAAMAAAD9/wkAAAAAAAMAAAD9/wgAAAAAAAMAAAD9/wcAAAAAAAMAAAD9/wYAAAAAAAMAAAD9/wUAAAAAAAMAAAD9/wQAAAABAAIAAAD9/wMAAAACAAEAAAD9/wIAAAACAAEAAAD9/wEAAAACAAEAAAD9/wAAAAADAAAAAAD9////AAAAAAMAAAD9//7/AAADAAMAAAD9//3/AAADAAIAAAD9//z/AAADAAEAAAD9//v/AAADAAAAAAD9//r/AAAAAAMAAAD9//n/AAAAAAMAAAD9//j/AAAAAAMAAAD9//f/AAAAAAMAAAD9//b/AAAAAAMAAAD+//b/AAAAAAMAAAD+//f/AAAAAAMAAAD+//j/AAAAAAMAAAD+//n/AAAAAAMAAAD+//r/AAAAAAMAAAD+//v/AAAAAAAAAAD+//z/AAADAAMAAAD+//3/AAAAAAMAAAD///3/AAAAAAMAAAD///z/AAAAAAMAAAD///v/AAAAAAMAAAD///r/AAAAAAMAAAD///n/AAAAAAMAAAD///j/AAAAAAMAAAD///f/AAAAAAMAAAD///b/AAAAAAMAAAAAAPb/AAAAAAMAAAAAAPf/AAAAAAMAAAAAAPj/AAAAAAMAAAAAAPn/AAAAAAMAAAAAAPr/AAAAAAMAAAAAAPv/AAAAAAMAAAAAAPz/AAABAAMAAAAAAP3/AAABAAAAAAABAP3/AAACAAEAAAABAPz/AAADAAAAAAABAPv/AAAAAAMAAAABAPr/AAAAAAMAAAABAPn/AAAAAAMAAAABAPj/AAAAAAMAAAABAPf/AAAAAAMAAAABAPb/AAAAAAMAAAACAPb/AAAAAAMAAAACAPf/AAAAAAMAAAACAPj/AAAAAAMAAAACAPn/AAAAAAMAAAACAPr/AAAAAAMAAAACAPv/AAAAAAMAAAACAPz/AAAAAAAAAAACAP3/AAADAAIAAAACAP7/AAADAAMAAAACAP//AAAAAAMAAAACAAAAAAAAAAMAAAACAAEAAAAAAAMAAAACAAIAAAAAAAMAAAACAAMAAAAAAAMAAAACAAQAAAAAAAMAAAACAAUAAAAAAAMAAAACAAYAAAAAAAMAAAACAAcAAAAAAAMAAAACAAgAAAAAAAMAAAACAAkAAAAAAAMAAAADAAkAAAAAAAMAAAADAAgAAAAAAAMAAAADAAcAAAAAAAMAAAADAAYAAAAAAAMAAAADAAUAAAAAAAMAAAADAAQAAAAAAAMAAAADAAMAAAAAAAMAAAADAAIAAAAAAAMAAAADAAEAAAAAAAMAAAADAAAAAAAAAAMAAAADAP//AAAAAAMAAAADAP7/AAAAAAMAAAADAP3/AAAAAAMAAAADAPz/AAAAAAMAAAADAPv/AAAAAAMAAAADAPr/AAAAAAMAAAADAPn/AAAAAAMAAAADAPj/AAAAAAMAAAADAPf/AAAAAAMAAAADAPb/AAAAAAMAAAAEAPb/AAAAAAMAAAAEAPf/AAAAAAMAAAAEAPj/AAAAAAMAAAAEAPn/AAAAAAMAAAAEAPr/AAAAAAMAAAAEAPv/AAAAAAMAAAAEAPz/AAAAAAMAAAAEAP3/AAAAAAMAAAAEAP7/AAAAAAMAAAAEAP//AAAAAAMAAAAEAAAAAAAAAAMAAAAEAAEAAAABAAMAAAAEAAIAAAAAAAIAAAAEAAMAAAAAAAMAAAAEAAQAAAAAAAMAAAAEAAUAAAAAAAMAAAAEAAYAAAAAAAMAAAAEAAcAAAAAAAMAAAAEAAgAAAAAAAMAAAAEAAkAAAAAAAMAAAAFAAkAAAAAAAMAAAAFAAgAAAAAAAMAAAAFAAcAAAAAAAMAAAAFAAYAAAAAAAMAAAAFAAUAAAAAAAMAAAAFAAQAAAAAAAMAAAAFAAMAAAAAAAIAAAAFAAIAAAAAAAEAAAAFAAEAAAAAAAAAAAAFAAAAAAAAAAMAAAAFAP//AAAAAAMAAAAFAP7/AAAAAAMAAAAFAP3/AAAAAAMAAAAFAPz/AAAAAAMAAAAFAPv/AAAAAAMAAAAFAPr/AAAAAAMAAAAFAPn/AAAAAAMAAAAFAPj/AAAAAAMAAAAFAPf/AAAAAAMAAAAFAPb/AAAAAAMAAAAGAPb/AAAAAAMAAAAGAPf/AAAAAAMAAAAGAPj/AAAAAAMAAAAGAPn/AAAAAAMAAAAGAPr/AAAAAAMAAAAGAPv/AAAAAAMAAAAGAPz/AAAAAAMAAAAGAP3/AAAAAAMAAAAGAP7/AAAAAAMAAAAGAP//AAAAAAMAAAAGAAAAAAAAAAMAAAAGAAEAAAAAAAMAAAAGAAIAAAADAAAAAAAGAAMAAAACAAIAAAAGAAQAAAAAAAIAAAAGAAUAAAAAAAMAAAAGAAYAAAAAAAMAAAAGAAcAAAAAAAMAAAAGAAgAAAAAAAMAAAAGAAkAAAAAAAMAAAAHAAkAAAAAAAMAAAAHAAgAAAAAAAMAAAAHAAcAAAAAAAMAAAAHAAYAAAAAAAMAAAAHAAUAAAAAAAMAAAAHAAQAAAADAAMAAAAHAAMAAAADAAIAAAAHAAIAAAAAAAAAAAAHAAEAAAAAAAMAAAAHAAAAAAAAAAMAAAAHAP//AAAAAAMAAAAHAP7/AAAAAAMAAAAHAP3/AAAAAAMAAAAHAPz/AAAAAAMAAAAHAPv/AAAAAAMAAAAHAPr/AAAAAAMAAAAHAPn/AAAAAAMAAAAHAPj/AAAAAAMAAAAHAPf/AAAAAAMAAAAHAPb/AAAAAAMAAAAIAPb/AAAAAAMAAAAIAPf/AAAAAAMAAAAIAPj/AAAAAAMAAAAIAPn/AAAAAAMAAAAIAPr/AAAAAAMAAAAIAPv/AAAAAAMAAAAIAPz/AAAAAAMAAAAIAP3/AAAAAAMAAAAIAP7/AAAAAAMAAAAIAP//AAAAAAMAAAAIAAAAAAAAAAMAAAAIAAEAAAAAAAMAAAAIAAIAAAAAAAMAAAAIAAMAAAAAAAMAAAAIAAQAAAAAAAMAAAAIAAUAAAAAAAMAAAAIAAYAAAAAAAMAAAAIAAcAAAAAAAMAAAAIAAgAAAAAAAMAAAAIAAkAAAAAAAMAAAAJAAkAAAAAAAMAAAAJAAgAAAAAAAMAAAAJAAcAAAAAAAMAAAAJAAYAAAAAAAMAAAAJAAUAAAAAAAMAAAAJAAQAAAAAAAMAAAAJAAMAAAAAAAMAAAAJAAIAAAAAAAMAAAAJAAEAAAAAAAMAAAAJAAAAAAAAAAMAAAAJAP//AAAAAAMAAAAJAP7/AAAAAAMAAAAJAP3/AAAAAAMAAAAJAPz/AAAAAAMAAAAJAPr/AAAAAAMAAAAJAPn/AAAAAAMAAAAJAPj/AAAAAAMAAAAJAPf/AAAAAAMAAAAJAPb/AAAAAAMAAAAKAPb/AAAAAAMAAAAKAPf/AAAAAAMAAAAKAPj/AAAAAAMAAAAKAPn/AAAAAAMAAAAKAPr/AAAAAAMAAAAKAPv/AAAAAAMAAAAKAPz/AAAAAAMAAAAKAP3/AAAAAAMAAAAKAP7/AAAAAAMAAAAKAP//AAAAAAMAAAAKAAAAAAAAAAMAAAAKAAEAAAAAAAMAAAAKAAIAAAAAAAMAAAAKAAMAAAAAAAMAAAAKAAQAAAAAAAMAAAAKAAUAAAAAAAMAAAAKAAYAAAAAAAMAAAAKAAcAAAAAAAMAAAAKAAgAAAAAAAMAAAAKAAkAAAAAAAMAAAALAAkAAAAAAAMAAAALAAgAAAAAAAMAAAALAAcAAAAAAAMAAAALAAYAAAAAAAMAAAALAAUAAAAAAAMAAAALAAQAAAAAAAMAAAALAAMAAAAAAAMAAAALAAIAAAAAAAMAAAALAAEAAAAAAAMAAAALAAAAAAAAAAMAAAALAP//AAAAAAMAAAALAP7/AAAAAAMAAAALAP3/AAAAAAMAAAALAPz/AAAAAAMAAAALAPv/AAAAAAMAAAALAPr/AAAAAAMAAAALAPn/AAAAAAMAAAALAPj/AAAAAAMAAAALAPf/AAAAAAMAAAALAPb/AAAAAAMAAAAMAPb/AAAAAAMAAAAMAPf/AAAAAAMAAAAMAPj/AAAAAAMAAAAMAPn/AAAAAAMAAAAMAPr/AAAAAAMAAAAMAPv/AAAAAAMAAAAMAPz/AAAAAAMAAAAMAP3/AAAAAAMAAAAMAP7/AAAAAAMAAAAMAP//AAAAAAMAAAAMAAAAAAAAAAMAAAAMAAEAAAAAAAMAAAAMAAIAAAAAAAMAAAAMAAMAAAAAAAMAAAAMAAQAAAAAAAMAAAAMAAUAAAAAAAMAAAAMAAYAAAAAAAMAAAAMAAcAAAAAAAMAAAAMAAgAAAAAAAMAAAAMAAkAAAAAAAMAAAANAAkAAAAAAAMAAAANAAgAAAAAAAMAAAANAAcAAAAAAAMAAAANAAYAAAAAAAMAAAANAAUAAAAAAAMAAAANAAQAAAAAAAMAAAANAAMAAAAAAAMAAAANAAIAAAAAAAMAAAANAAEAAAAAAAMAAAANAAAAAAAAAAMAAAANAP//AAAAAAMAAAANAP7/AAAAAAMAAAANAP3/AAAAAAMAAAANAPz/AAAAAAMAAAANAPv/AAAAAAMAAAANAPr/AAAAAAMAAAANAPn/AAAAAAMAAAANAPj/AAAAAAMAAAANAPf/AAAAAAMAAAANAPb/AAAAAAMAAAAOAPb/AAAAAAMAAAAOAPf/AAAAAAMAAAAOAPj/AAAAAAMAAAAOAPn/AAAAAAMAAAAOAPr/AAAAAAMAAAAOAPv/AAAAAAMAAAAOAPz/AAAAAAMAAAAOAP3/AAAAAAMAAAAOAP7/AAAAAAMAAAAOAP//AAAAAAMAAAAOAAAAAAAAAAMAAAAOAAEAAAAAAAMAAAAOAAIAAAAAAAMAAAAOAAMAAAAAAAMAAAAOAAQAAAAAAAMAAAAOAAUAAAAAAAMAAAAOAAYAAAAAAAMAAAAOAAcAAAAAAAMAAAAOAAgAAAAAAAMAAAAOAAkAAAAAAAMAAAAPAAkAAAAAAAMAAAAPAAgAAAAAAAMAAAAPAAcAAAAAAAMAAAAPAAYAAAAAAAMAAAAPAAUAAAAAAAMAAAAPAAQAAAAAAAMAAAAPAAMAAAAAAAMAAAAPAAIAAAAAAAMAAAAPAAEAAAAAAAMAAAAPAAAAAAAAAAMAAAAPAP//AAAAAAMAAAAPAP7/AAAAAAMAAAAPAP3/AAAAAAMAAAAPAPz/AAAAAAMAAAAPAPv/AAAAAAMAAAAPAPr/AAAAAAMAAAAPAPn/AAAAAAMAAAAPAPj/AAAAAAMAAAAPAPf/AAAAAAMAAAAPAPb/AAAAAAMAAAAQAPb/AAAAAAMAAAAQAPf/AAAAAAMAAAAQAPj/AAAAAAMAAAAQAPn/AAAAAAMAAAAQAPr/AAAAAAMAAAAQAPv/AAAAAAMAAAAQAPz/AAAAAAMAAAAQAP3/AAAAAAMAAAAQAP7/AAAAAAMAAAAQAP//AAAAAAMAAAAQAAAAAAAAAAMAAAAQAAEAAAAAAAMAAAAQAAIAAAAAAAMAAAAQAAMAAAAAAAMAAAAQAAQAAAAAAAMAAAAQAAUAAAAAAAMAAAAQAAYAAAAAAAMAAAAQAAcAAAAAAAMAAAAQAAgAAAAAAAMAAAAQAAkAAAAAAAMAAAARAAkAAAAAAAMAAAARAAgAAAAAAAMAAAARAAcAAAAAAAMAAAARAAYAAAAAAAMAAAARAAUAAAAAAAMAAAARAAQAAAAAAAMAAAARAAMAAAAAAAMAAAARAAIAAAAAAAMAAAARAAEAAAAAAAMAAAARAAAAAAAAAAMAAAARAP//AAAAAAMAAAARAP7/AAAAAAMAAAARAP3/AAAAAAMAAAARAPz/AAAAAAMAAAARAPv/AAAAAAMAAAARAPr/AAAAAAMAAAARAPn/AAAAAAMAAAARAPj/AAAAAAMAAAARAPf/AAAAAAMAAAARAPb/AAAAAAMAAAASAPb/AAAAAAMAAAASAPf/AAAAAAMAAAASAPj/AAAAAAMAAAASAPn/AAAAAAMAAAASAPr/AAAAAAMAAAASAPv/AAAAAAMAAAASAPz/AAAAAAMAAAASAP3/AAAAAAMAAAASAP7/AAAAAAMAAAASAP//AAAAAAMAAAASAAAAAAAAAAMAAAASAAEAAAAAAAMAAAASAAIAAAAAAAMAAAASAAMAAAAAAAMAAAASAAQAAAAAAAMAAAASAAUAAAAAAAMAAAASAAYAAAAAAAMAAAASAAcAAAAAAAMAAAASAAgAAAAAAAMAAAASAAkAAAAAAAMAAAAJAPv/AAAAAAMAAAA=")
+tile_set = ExtResource("2_t74h0")
+
+[node name="GridPlayer" parent="." instance=ExtResource("3_i4hbv")]
+position = Vector2(24, 24)
+
+[node name="LevelExit" parent="." instance=ExtResource("4_h0uxt")]
+position = Vector2(24, -40)
+
+[node name="Stone" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, -8)
+
+[node name="Stone25" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(8, -8)
+
+[node name="Stone26" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(24, -8)
+
+[node name="Stone27" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(40, -8)
+
+[node name="Stone28" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(56, -8)
+
+[node name="Stone29" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(72, -8)
+
+[node name="Stone30" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(88, -8)
+
+[node name="Stone31" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(104, -8)
+
+[node name="Stone32" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(120, -8)
+
+[node name="Stone33" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(136, -8)
+
+[node name="Stone45" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(8, 88)
+
+[node name="Stone46" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(24, 88)
+
+[node name="Stone47" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(40, 88)
+
+[node name="Stone48" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(56, 88)
+
+[node name="Stone62" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(72, 88)
+
+[node name="Stone63" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(88, 88)
+
+[node name="Stone64" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(104, 88)
+
+[node name="Stone65" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(120, 88)
+
+[node name="Stone66" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(136, 88)
+
+[node name="Stone67" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(152, 88)
+
+[node name="Stone68" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(168, 88)
+
+[node name="Stone69" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(184, 88)
+
+[node name="Stone70" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(200, 88)
+
+[node name="Stone136" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(232, 104)
+
+[node name="Stone137" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(232, 120)
+
+[node name="Stone142" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(232, 136)
+
+[node name="Stone71" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(216, 88)
+
+[node name="Stone72" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(232, 88)
+
+[node name="Stone73" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(248, 88)
+
+[node name="Stone74" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(264, 88)
+
+[node name="Stone75" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(280, 88)
+
+[node name="Stone76" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(296, 88)
+
+[node name="Stone77" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(312, 88)
+
+[node name="Stone34" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(152, -8)
+
+[node name="Stone35" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(168, -8)
+
+[node name="Stone36" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(184, -8)
+
+[node name="Stone37" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(200, -8)
+
+[node name="Stone38" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(216, -8)
+
+[node name="Stone39" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(232, -8)
+
+[node name="Stone40" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(248, -8)
+
+[node name="Stone41" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(264, -8)
+
+[node name="Stone42" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(280, -8)
+
+[node name="Stone43" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(296, -8)
+
+[node name="Stone44" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(312, -8)
+
+[node name="Stone2" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, -24)
+
+[node name="Stone3" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, -40)
+
+[node name="Stone4" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, -56)
+
+[node name="Stone5" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, -72)
+
+[node name="Stone6" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, -88)
+
+[node name="Stone7" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, -104)
+
+[node name="Stone8" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, -120)
+
+[node name="Stone9" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, -136)
+
+[node name="Stone10" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, -152)
+
+[node name="Stone11" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, -168)
+
+[node name="Stone12" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, 8)
+
+[node name="Stone13" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, 24)
+
+[node name="Stone14" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, 40)
+
+[node name="Stone15" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, 56)
+
+[node name="Stone49" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-72, -8)
+
+[node name="Stone78" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-88, -8)
+
+[node name="Stone102" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-88, -168)
+
+[node name="Stone103" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-88, -184)
+
+[node name="Stone104" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-88, -152)
+
+[node name="Stone105" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-88, -136)
+
+[node name="Stone106" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-88, -120)
+
+[node name="Stone107" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-88, -104)
+
+[node name="Stone79" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-104, -8)
+
+[node name="Stone80" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-120, -8)
+
+[node name="Stone81" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-136, -8)
+
+[node name="Stone82" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-152, -8)
+
+[node name="Stone83" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-168, -8)
+
+[node name="Stone84" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-184, -8)
+
+[node name="Stone85" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-200, -8)
+
+[node name="Stone86" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-216, -8)
+
+[node name="Stone87" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-232, -8)
+
+[node name="Stone88" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-248, -8)
+
+[node name="Stone89" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-264, -8)
+
+[node name="Stone90" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-280, -8)
+
+[node name="Stone91" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-296, -8)
+
+[node name="Stone92" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-312, -8)
+
+[node name="Stone50" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-56, -8)
+
+[node name="Stone51" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-40, -8)
+
+[node name="Stone52" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-24, -8)
+
+[node name="Stone53" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(8, 184)
+
+[node name="Stone54" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(24, 184)
+
+[node name="Stone55" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(40, 184)
+
+[node name="Stone56" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(56, 184)
+
+[node name="Stone57" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(72, 184)
+
+[node name="Stone133" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-168, 152)
+
+[node name="Stone173" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(152, 24)
+
+[node name="Stone174" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(152, 56)
+
+[node name="Stone134" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-168, 168)
+
+[node name="Stone135" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-168, 184)
+
+[node name="Stone58" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(88, 184)
+
+[node name="Stone59" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(104, 184)
+
+[node name="Stone60" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(120, 184)
+
+[node name="Stone61" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(136, 184)
+
+[node name="Stone16" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, 72)
+
+[node name="Stone17" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, 88)
+
+[node name="Stone93" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-312, 88)
+
+[node name="Stone94" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-296, 88)
+
+[node name="Stone95" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-280, 88)
+
+[node name="Stone96" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-264, 88)
+
+[node name="Stone97" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-248, 88)
+
+[node name="Stone98" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-232, 88)
+
+[node name="Stone99" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-216, 88)
+
+[node name="Stone100" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-200, 88)
+
+[node name="Stone101" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-184, 88)
+
+[node name="Stone143" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-168, 88)
+
+[node name="Stone108" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-88, -88)
+
+[node name="Stone113" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-104, -88)
+
+[node name="Stone123" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-168, -88)
+
+[node name="Stone124" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-184, -88)
+
+[node name="Stone125" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-200, -88)
+
+[node name="Stone126" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-216, -88)
+
+[node name="Stone127" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-232, -88)
+
+[node name="Stone128" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-248, -88)
+
+[node name="Stone129" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-264, -88)
+
+[node name="Stone130" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-280, -88)
+
+[node name="Stone131" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-296, -88)
+
+[node name="Stone132" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-312, -88)
+
+[node name="Stone114" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-120, -88)
+
+[node name="Stone115" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(200, -24)
+
+[node name="Stone117" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(200, -40)
+
+[node name="Stone118" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(200, -56)
+
+[node name="Stone151" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(104, -152)
+
+[node name="Stone152" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(120, -152)
+
+[node name="Stone153" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(104, -136)
+
+[node name="Stone154" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(104, -120)
+
+[node name="Stone155" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(104, -104)
+
+[node name="Stone156" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(120, -104)
+
+[node name="Stone157" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(136, -104)
+
+[node name="Stone158" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(152, -104)
+
+[node name="Stone169" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(136, -120)
+
+[node name="Stone170" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(120, -120)
+
+[node name="Stone171" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(120, -136)
+
+[node name="Stone172" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(136, -136)
+
+[node name="Stone159" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(152, -120)
+
+[node name="Stone160" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(152, -136)
+
+[node name="Stone161" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(152, -152)
+
+[node name="Stone162" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(136, -152)
+
+[node name="Stone163" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(248, 24)
+
+[node name="Stone164" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(248, 56)
+
+[node name="Stone165" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(200, 40)
+
+[node name="Stone119" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(200, -72)
+
+[node name="Stone120" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(200, -88)
+
+[node name="Stone116" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-136, -88)
+
+[node name="Stone122" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-152, -88)
+
+[node name="Stone109" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-104, 136)
+
+[node name="Stone138" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-104, 120)
+
+[node name="Stone139" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-104, 104)
+
+[node name="Stone141" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-104, 88)
+
+[node name="Stone166" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-120, 88)
+
+[node name="Stone167" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-136, 88)
+
+[node name="Stone168" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-152, 88)
+
+[node name="Stone110" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-104, 152)
+
+[node name="Stone111" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-104, 168)
+
+[node name="Stone112" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-104, 184)
+
+[node name="Stone121" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-88, 184)
+
+[node name="Stone140" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-72, 152)
+
+[node name="Stone144" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-56, 184)
+
+[node name="Stone145" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-56, 168)
+
+[node name="Stone146" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-56, 152)
+
+[node name="Stone147" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-56, 136)
+
+[node name="Stone148" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-56, 120)
+
+[node name="Stone149" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-56, 104)
+
+[node name="Stone150" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-56, 88)
+
+[node name="Stone18" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, 104)
+
+[node name="Stone19" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, 120)
+
+[node name="Stone20" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, 136)
+
+[node name="Stone21" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, 152)
+
+[node name="Stone22" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, 168)
+
+[node name="Stone23" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, 184)
+
+[node name="Stone24" parent="." instance=ExtResource("5_keyqw")]
+position = Vector2(-8, -184)
