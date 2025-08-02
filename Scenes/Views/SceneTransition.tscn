@@ -1,6 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://br8tcoxlbs0vx"]
+[gd_scene load_steps=6 format=3 uid="uid://c13vf3ordv05b"]
 
 [ext_resource type="Script" uid="uid://kcrnyixcxt2d" path="res://Scripts/UI/scene_transition_handler.gd" id="1_bfndq"]
+
+[sub_resource type="Animation" id="Animation_6m3dt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_8ex0v"]
 resource_name = "fade_in"
@@ -16,21 +31,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_6m3dt"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_hynk4"]
