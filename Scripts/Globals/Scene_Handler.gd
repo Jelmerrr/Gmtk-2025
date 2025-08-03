@@ -1,6 +1,7 @@
 extends Node
 var menu_path = "res://Scenes/Views/Menu_View.tscn"
 var level_path = "res://Scenes/Views/level_view.tscn"
+var finish_path = "res://Scenes/Views/Finish.tscn"
 
 var current_scene = null
 
