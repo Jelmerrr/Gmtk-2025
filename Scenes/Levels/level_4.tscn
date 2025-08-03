@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://yyqmokfvqsnf"]
+[gd_scene load_steps=10 format=4 uid="uid://yyqmokfvqsnf"]
 
 [ext_resource type="Script" uid="uid://cmgaapvbxaihh" path="res://Scripts/Level/Level_Handler.gd" id="1_jqrsn"]
 [ext_resource type="TileSet" uid="uid://2gapqmdxdb8i" path="res://Assets/Tilesets/SnowIceTileset.tres" id="2_t74h0"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://xpqqqnuvp476" path="res://Assets/Tilesets/rockTileMap.png" id="3_t74h0"]
 [ext_resource type="PackedScene" uid="uid://tkwu8uukavbo" path="res://Scenes/LevelExit.tscn" id="4_h0uxt"]
 [ext_resource type="PackedScene" uid="uid://baah4e84utq02" path="res://Scenes/Stone/Stone.tscn" id="5_keyqw"]
+[ext_resource type="FontFile" uid="uid://byovp5x68ppfr" path="res://Assets/Fonts/PixelOperator8.ttf" id="7_i4hbv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i4hbv"]
 texture = ExtResource("3_t74h0")
@@ -580,3 +581,20 @@ position = Vector2(-8, 184)
 
 [node name="Stone24" parent="." instance=ExtResource("5_keyqw")]
 position = Vector2(-8, -184)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = 127.0
+offset_right = 88.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.835294, 0.4, 0.4, 1)
+theme_override_fonts/font = ExtResource("7_i4hbv")
+theme_override_font_sizes/font_size = 32
+text = "Level 4"

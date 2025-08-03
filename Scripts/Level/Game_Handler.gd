@@ -33,8 +33,7 @@ func _on_reset_button_pressed() -> void:
 func OnLevelComplete() -> void:
 	current_level_id += 1
 	if current_level_id == 6:
-		SceneHandler.switch_scene(SceneHandler.menu_path)
+		SceneHandler.switch_scene(SceneHandler.finish_path)
 	else:
 		SwitchLevel(LevelLibrary.levelDict[LevelLibrary.levelDict.keys()[current_level_id]].Scene)
-	print("Level Complete")
 	

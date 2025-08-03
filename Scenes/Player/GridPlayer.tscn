@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://t63d16afrss8"]
 
 [ext_resource type="Script" uid="uid://dbx6ut24gukcv" path="res://Scenes/Player/grid_player.gd" id="1_n0123"]
-[ext_resource type="Texture2D" uid="uid://0vs6g7ruxdhf" path="res://Assets/RedRect PlaceHolder.jpg" id="2_3ql7e"]
+[ext_resource type="Texture2D" uid="uid://chgmu3svox6iy" path="res://Assets/player.png" id="2_n0123"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57w8b"]
 size = Vector2(32, 32)
@@ -11,8 +11,7 @@ script = ExtResource("1_n0123")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 2
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_3ql7e")
+texture = ExtResource("2_n0123")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.5, 0.5)

@@ -2,6 +2,7 @@ extends Area2D
 
 @onready var ray = $RayCast2D
 @onready var screen_size = Vector2i(640,360)
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 
 var tile_size = 16
@@ -49,6 +50,7 @@ func _unhandled_input(event: InputEvent) -> void:
 #			move(dir)
 
 func move(dir):
+	sprite_2d.look_at(sprite_2d.global_position + dir)
 	ray.target_position = dir * tile_size
 	ray.force_raycast_update()
 	startOfMovementState = currentState

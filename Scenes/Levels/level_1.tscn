@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://benna5qru4t0v"]
+[gd_scene load_steps=11 format=4 uid="uid://benna5qru4t0v"]
 
 [ext_resource type="TileSet" uid="uid://2gapqmdxdb8i" path="res://Assets/Tilesets/SnowIceTileset.tres" id="1_3mqfk"]
 [ext_resource type="Script" uid="uid://cmgaapvbxaihh" path="res://Scripts/Level/Level_Handler.gd" id="1_iixi8"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://xpqqqnuvp476" path="res://Assets/Tilesets/rockTileMap.png" id="3_5f3p6"]
 [ext_resource type="PackedScene" uid="uid://t63d16afrss8" path="res://Scenes/Player/GridPlayer.tscn" id="3_cyadu"]
 [ext_resource type="PackedScene" uid="uid://tkwu8uukavbo" path="res://Scenes/LevelExit.tscn" id="3_xgxfi"]
+[ext_resource type="FontFile" uid="uid://byovp5x68ppfr" path="res://Assets/Fonts/PixelOperator8.ttf" id="7_5f3p6"]
+[ext_resource type="StyleBox" uid="uid://c85tjq24m38bs" path="res://Resources/main_menu_ui.tres" id="8_jv26f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xgxfi"]
 texture = ExtResource("3_5f3p6")
@@ -97,3 +99,73 @@ position = Vector2(40, -8)
 
 [node name="GridPlayer" parent="." instance=ExtResource("3_cyadu")]
 position = Vector2(-36, -16)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = 127.0
+offset_right = 88.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.835294, 0.4, 0.4, 1)
+theme_override_fonts/font = ExtResource("7_5f3p6")
+theme_override_font_sizes/font_size = 32
+text = "Level 1"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -160.0
+offset_right = 140.0
+offset_bottom = -95.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("8_jv26f")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 279.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("7_5f3p6")
+text = "Use <WASD> to move, the edges of the screen are connected"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = 188.5
+offset_right = -147.0
+offset_bottom = 242.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("8_jv26f")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/Panel"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 159.0
+offset_bottom = 53.0
+theme_override_fonts/font = ExtResource("7_5f3p6")
+text = "Move to the left"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

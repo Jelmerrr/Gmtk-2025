@@ -36,7 +36,7 @@ func GetPlayingPlayer(SFX):
 
 func GetMusicDelay():
 	if music_player.playing == false:
-		var delay = RngHandler.rng.randi_range(15, 60)
+		var delay = RngHandler.rng.randi_range(10, 30)
 		music_delay.wait_time = delay
 		music_delay.start()
 
