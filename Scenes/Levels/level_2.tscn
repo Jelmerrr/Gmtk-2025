@@ -35,7 +35,7 @@ texture = ExtResource("3_fphuk")
 [sub_resource type="TileSet" id="TileSet_blpqv"]
 sources/0 = SubResource("TileSetAtlasSource_pnnky")
 
-[node name="Level 2" type="Node2D"]
+[node name="Level 3" type="Node2D"]
 script = ExtResource("1_w2ac1")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -202,7 +202,7 @@ offset_top = 1.0
 offset_right = 168.0
 offset_bottom = 79.0
 theme_override_fonts/font = ExtResource("7_fphuk")
-text = "Use sceen looping to reach new places"
+text = "Use screen looping to reach new places"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

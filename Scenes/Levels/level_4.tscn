@@ -43,7 +43,7 @@ texture = ExtResource("3_t74h0")
 [sub_resource type="TileSet" id="TileSet_h0uxt"]
 sources/0 = SubResource("TileSetAtlasSource_i4hbv")
 
-[node name="Level 2" type="Node2D"]
+[node name="Level 3" type="Node2D"]
 script = ExtResource("1_jqrsn")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
